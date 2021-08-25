@@ -196,7 +196,7 @@ export default function Main() {
           </div>
         </div>
       </div>
-      {/* <a name="usecases" id='usecases'></a>
+      <a name="usecases" id='usecases'></a>
       <div className='main-usecases'>
         <h2>
           Use Cases
@@ -205,7 +205,7 @@ export default function Main() {
           <div className='main-usecases__content-item mobile-visible'>
             <img src={spiral1Img} />
           </div>
-          <div className='main-usecases__content-img'>
+          <div className='main-usecases__content-wrapper'>
             <div className='main-usecases__content-item'>
               <h4>Decentralized Portfolio Management</h4>
               <p>Validator set portfolio management with full user funds control.</p>
@@ -216,10 +216,12 @@ export default function Main() {
               <p>Automatically compounding fees without need for active intervention.</p>
             </div>
           </div>
-          <div className='main-usecases__content-img'>
+          <div className='main-usecases__content-wrapper'>
             <div className='main-usecases__content-item'>
               <h4>Permissionless Governance</h4>
               <p>Propose new DeFi strategies for community vote and validator managed deployment.Typography</p>
+            </div>
+            <div className='main-usecases__content-spacer'>
             </div>
             <div className='main-usecases__content-item'>
               <h4>Automated Portfolio Rebalancing</h4>
@@ -227,7 +229,7 @@ export default function Main() {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
       <div className='main-divider'></div>
 

@@ -219,7 +219,7 @@ export default function Main() {
           <div className='main-usecases__content-wrapper'>
             <div className='main-usecases__content-item'>
               <h4>Permissionless Governance</h4>
-              <p>Propose new DeFi strategies for community vote and validator managed deployment.Typography</p>
+              <p>Propose new DeFi strategies for community vote and validator managed deployment.</p>
             </div>
             <div className='main-usecases__content-spacer'>
             </div>

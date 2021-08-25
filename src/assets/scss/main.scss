@@ -536,6 +536,7 @@
     @include respond-to(mobile) {
       padding-left: 50px;
       padding-right: 50px;
+      padding-bottom: 78px;
     }
 
     img {
@@ -543,9 +544,11 @@
     }
     h1 {
       margin-top: 49px;
+      text-align: center;
     }
     h3 {
       margin-top: 30px;
+      text-align: center;
     }
     .add-liquidity-button {
       @include text-button();
@@ -694,28 +697,41 @@
       flex-direction: column;
       align-items: center;
 
-      @include respond-to(tablet) {
-        flex-direction: row;
-      }
-
-      @include respond-to(desktop) {
-        flex-direction: row;
-      }
-
       img {
         max-width: 223px;
         margin-left: 0px;
         margin-right: 0px;
 
         @include respond-to(tablet) {
-          max-width: 448px;
+          max-width: 333px;
           margin-left: 39px;
           margin-right: 39px
         }
         @include respond-to(desktop) {
-          max-width: 448px;
+          max-width: 444px;
           margin-left: 39px;
           margin-right: 39px
+        }
+      }
+
+      &-wrapper {
+        display: flex;
+        flex-direction: row;
+
+        @include respond-to(mobile) {
+          flex-direction: column;
+        }
+      }
+
+      &-spacer {
+        width: 310px;
+
+        @include respond-to(tablet) {
+          width: 150px;
+        }
+
+        @include respond-to(mobile) {
+          display: none;
         }
       }
 
@@ -731,27 +747,34 @@
         }
 
         h4 {
-          text-align: left;
-          margin-top: 74px;
+          text-align: center;
+          display: block;
+          max-width: 334px;
+          min-height: 78px;
+
+          @include respond-to(tablet) {
+            min-height: 56px;
+          }
+
+          @include respond-to(mobile) {
+            margin-top: 43px;
+            margin-left: auto;
+            margin-right: auto;
+            min-height: 34px;
+          }
+        }
+
+        p {
+          @include text-content();
+          text-align: center;
           display: block;
           max-width: 358px;
           margin-left: auto;
           margin-right: auto;
 
           @include respond-to(mobile) {
-            margin-top: 43px;
-            margin-left: 0px;
-            margin-right: 0px;
+            width: 100%;
           }
-        }
-
-        p {
-          @include text-content();
-          text-align: left;
-          display: block;
-          max-width: 358px;
-          margin-left: auto;
-          margin-right: auto;
         }
       }
     }

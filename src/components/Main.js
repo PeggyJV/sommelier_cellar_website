@@ -260,7 +260,8 @@ export default function Main() {
               </div>
             </div>
             <div className='cellar-item__body'>
-              <span>Recent Performance</span>
+              <p>Recent Performance</p>
+              <span>&nbsp;</span>
               <div className='cellar-pool-detail'>
                 <div className='cellar-pool-detail-title'>
                   7d Cellar Earnings
@@ -299,7 +300,7 @@ export default function Main() {
               </div>
             </div>
             <div className='cellar-item__body'>
-              <p>Recent Cellar Performance</p>
+              <p>Recent Performance</p>
               <span>Past 7d/ 24hrs</span>
               <div className='cellar-pool-detail'>
                 <div className='cellar-pool-detail-title'>

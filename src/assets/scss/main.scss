@@ -250,6 +250,7 @@
       flex-direction: column;
       color: $white;
       // width: 640px;
+      border: 1.03854px solid #2F3B58;
 
       @include respond-to(tablet) {
         border-radius: $desktop-border-radius;
@@ -333,6 +334,7 @@
         height: 110px;
         border-bottom: 1.03854px solid #2F3B58;
         display: flex;
+        border-top-right-radius: 0px;
 
         @include respond-to(mobile) {
           flex-direction: column;
@@ -355,6 +357,7 @@
         width: 310px;
         height: 100%;
         border-right: 1.03854px solid #2F3B58;
+        border-top-right-radius: 0px;
 
         @include respond-to(mobile) {
           border-right: none;
@@ -393,10 +396,11 @@
         padding: 0px 40px;
 
         border-top-left-radius: $mobile-border-radius;
-        border-top-right-radius: $mobile-border-radius;
+        border-top-right-radius: 0px;
         border-bottom: 1.03854px solid #2F3B58;
         @include respond-to(tablet) {
           border-top-left-radius: $desktop-border-radius;
+          border-top-right-radius: $mobile-border-radius;
           border-bottom: none;
         }
         @include respond-to(desktop) {

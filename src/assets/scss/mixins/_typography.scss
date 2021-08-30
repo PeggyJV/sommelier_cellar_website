@@ -113,7 +113,8 @@ NOTE: by default, type elements should not have top margins
 }
 
 @mixin sub-title($color: $white, $textAlign: left) {
-  @include font-base($font-family-lato, normal, 700);
+  //@include font-base($font-family-lato, normal, 700);
+  @include font-base($font-family-barlow, normal, 600);
   font-size: 25px !important;
   line-height: 37px;
   letter-spacing: 0em;

@@ -260,7 +260,8 @@ export default function Main() {
               </div>
             </div>
             <div className='cellar-item__body'>
-              <span>Recent Performance</span>
+              <p>Recent Performance</p>
+              <span>&nbsp;</span>
               <div className='cellar-pool-detail'>
                 <div className='cellar-pool-detail-title'>
                   7d Cellar Earnings

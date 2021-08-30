@@ -250,6 +250,7 @@
       flex-direction: column;
       color: $white;
       // width: 640px;
+      border: 1.03854px solid #2F3B58;
 
       @include respond-to(tablet) {
         border-radius: $desktop-border-radius;

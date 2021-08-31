@@ -29,7 +29,7 @@ const Nav = ({ settings, lang, pathname }) => {
   return (
     <header className='container-fluid'>
       <nav className='' role='navigation'>
-        <div className='nav-container d-flex container'>
+        <div className='nav-container d-flex '>
           <div className='text-primary nav-container__title'>
             <button onClick={handleHamburger} className='d-block d-sm-none'>
               <img src='/images/button-hamburger.png' width='24' />

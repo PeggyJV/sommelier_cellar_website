@@ -66,9 +66,8 @@ h5 {
 
 .nav-container {
   margin-top: 1.313rem;
-  align-items: center;
   @include respond-to(desktop) {
-    max-width: 1440px;
+    margin-left: 80px;
   }
   @include respond-to(mobile) {
     flex-direction: column;

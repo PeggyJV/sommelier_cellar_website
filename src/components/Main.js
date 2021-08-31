@@ -119,8 +119,8 @@ export default function Main() {
                   <span className='cellar-text-2'>Choose Cellar</span>
                   <div className='detail'>
                     <img className='coin' src={ethImg} />
-                    <img className='coin' src={usdtImg} />
-                    <span className='pair'>ETH/USDT</span>
+                    <img className='coin' src={usdcImg} />
+                    <span className='pair'>ETH/USDC</span>
                     <img className='chevron' src={chevronDownImg} />
                   </div>
                 </div>
@@ -244,85 +244,46 @@ export default function Main() {
           </a>
         </div>
         <div className='main-cellar__right-container'>
-          <div className='cellar-item'>
-            <div className='cellar-item__header'>
-              {/* <div className='cellar-item__header__badge'>
-                <div className='cellar-badge'>
-                  Highlighted
-                </div>
-              </div> */}
-              <div className='cellar-item__header__icon'>
-                <img src={ethImg}/>
-                <img src={usdtImg}/>
-              </div>
-              <div className='cellar-item__header__pool'>
-                ETH/USDT
-              </div>
-            </div>
-            <div className='cellar-item__body'>
-              <p>Recent Performance</p>
-              <span>&nbsp;</span>
-              <div className='cellar-pool-detail'>
-                <div className='cellar-pool-detail-title'>
-                  7d Cellar Earnings
-                </div>
-                <div className='cellar-pool-detail-value'>
-                  $1M
-                </div>
-              </div>
-              <div className='cellar-pool-detail'>
-                <div className='cellar-pool-detail-title'>
-                  24h Volume
-                </div>
-                <div className='cellar-pool-detail-value'>
-                  $1.234M
-                </div>
-              </div>
-            </div>
-            {/* <div className='cellar-item__footer'>
-              <a href='https://app.sommelier.finance/' target='_blank' className='add-liquidity-button'>Add Liquidity</a>
-            </div> */}
-          </div>
-
-          <div className='cellar-item'>
-            <div className='cellar-item__header'>
-              <div className='cellar-item__header__badge'>
-                {/* <div className='cellar-badge'>
-                  Highlighted
+          {[0, 1].map((item) => (
+            <div className='cellar-item' key={`cellar-item-${item}`}>
+              <div className='cellar-item__header'>
+                {/* <div className='cellar-item__header__badge'>
+                  <div className='cellar-badge'>
+                    Highlighted
+                  </div>
                 </div> */}
+                <div className='cellar-item__header__icon'>
+                  <img src={ethImg}/>
+                  <img src={usdcImg}/>
+                </div>
+                <div className='cellar-item__header__pool'>
+                  ETH/USDC
+                </div>
               </div>
-              <div className='cellar-item__header__icon'>
-                <img src={ethImg}/>
-                <img src={usdcImg}/>
+              <div className='cellar-item__body'>
+                <span>Recent Performance</span>
+                <div className='cellar-pool-detail'>
+                  <div className='cellar-pool-detail-title'>
+                    7d Cellar Earnings
+                  </div>
+                  <div className='cellar-pool-detail-value'>
+                    $1M
+                  </div>
+                </div>
+                <div className='cellar-pool-detail'>
+                  <div className='cellar-pool-detail-title'>
+                    24h Volume
+                  </div>
+                  <div className='cellar-pool-detail-value'>
+                    $1.234M
+                  </div>
+                </div>
               </div>
-              <div className='cellar-item__header__pool'>
-                ETH/USDC
-              </div>
+              {/* <div className='cellar-item__footer'>
+                <a href='https://app.sommelier.finance/' target='_blank' className='add-liquidity-button'>Add Liquidity</a>
+              </div> */}
             </div>
-            <div className='cellar-item__body'>
-              <p>Recent Performance</p>
-              <span>Past 7d/ 24hrs</span>
-              <div className='cellar-pool-detail'>
-                <div className='cellar-pool-detail-title'>
-                  7d Pool Earnings
-                </div>
-                <div className='cellar-pool-detail-value'>
-                  $1M
-                </div>
-              </div>
-              <div className='cellar-pool-detail'>
-                <div className='cellar-pool-detail-title'>
-                  24h Volume
-                </div>
-                <div className='cellar-pool-detail-value'>
-                  $1.234M
-                </div>
-              </div>
-            </div>
-            {/* <div className='cellar-item__footer'>
-              <a href='https://app.sommelier.finance/' target='_blank' className='add-liquidity-button'>Add Liquidity</a>
-            </div> */}
-          </div>
+          ))}
         </div>
       </div>
 

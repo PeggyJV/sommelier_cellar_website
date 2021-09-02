@@ -68,6 +68,7 @@ h5 {
   margin-top: 1.313rem;
   @include respond-to(desktop) {
     margin-left: 80px;
+    margin-right: 80px;
   }
   @include respond-to(mobile) {
     flex-direction: column;

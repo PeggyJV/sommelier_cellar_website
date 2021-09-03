@@ -17,9 +17,10 @@ import "../assets/scss/main.scss"
 import welcomeBg from '@images/welcome.png'
 import spiral1Img from '@images/spiral-1.png'
 import spiral2Img from '@images/spiral-2.png'
-import chevronDownImg from '@images/chevron-down.png';
+import chevronDownImg from '@images/chevron-down.png'
 import coinsImg from '@images/coins.png'
 import coinsWhiteImg from '@images/coins-white.png'
+import infoCircleImg from '@images/info-circle.png'
 
 import ethImg from '@images/coins/eth.png'
 import usdcImg from '@images/coins/usdc.png'
@@ -99,7 +100,7 @@ export default function Main() {
   return (
     <div className='mt-5 main-container'>
       <div className='main-top'>
-        <div className='main-top__left-container'>
+        <div className='main-top__left-container' style={{ marginBottom: 20 }}>
           <h1 className='d-block sommelier'>
             Sommelier
           </h1>
@@ -112,52 +113,52 @@ export default function Main() {
           </a>
         </div>
         <div className='main-top__right-container' style={cellBoardStyle}>
-          <div className='cellar-board'>
-            <div className='cellar-board-top'>
-              <div className='cellar-board-left'>
-                <div className='cellar-board-header'>
-                  <span className='cellar-text-2'>Choose Cellar</span>
-                  <div className='detail'>
-                    <img className='coin' src={ethImg} />
-                    <img className='coin' src={usdcImg} />
-                    <span className='pair'>ETH/USDC</span>
-                    <img className='chevron' src={chevronDownImg} />
-                  </div>
+          <div className='cellar-item top'>
+            <div className='cellar-item__header top'>
+              <div className='cellar-item__header__title'>
+                <div className='cellar-item__header__title-title'>
+                  USDC-ETH
+                  <img src={infoCircleImg} />
+                </div>
+                <div className='cellar-item__header__title-icon'>
+                  <img src={ethImg}/>
+                  <img src={usdcImg}/>
                 </div>
               </div>
-              <div className='cellar-board-right'>
-                <div className='cellar-board-header2'>
-                  <div className='detail'>
-                    <span className='cellar-text-5'>Network</span>
-                    <span className='cellar-text-6'>Ethereum</span>
-                  </div>
-                  <div className='detail'>
-                    <span className='cellar-text-5'>AMM</span>
-                    <span className='cellar-text-6'>Uniswap v3</span>
-                  </div>
-                  {/* <a href='https://app.sommelier.finance' className='launch-button' target='_blank'>Add Liquidity</a> */}
-                </div>
+              <div className='cellar-item__header__badge'>
+                <div className='cellar-item__header__badge-item magenta'>1WEEK</div>
+                <div className='cellar-item__header__badge-item blue'>0.05%</div>
+                <div className='cellar-item__header__badge-item purple'>2SD</div>
+                <div className='cellar-item__header__badge-item transparent'>Uniswapv3</div>
               </div>
             </div>
-            <div className='cellar-board__bottom'>
-              <div className='cellar-board-left'>
-                <div className='cellar-board-body'>
-                  <span className='cellar-text-2'>Recent Cellar Performance</span>
-                  <span className='cellar-text-3'>7d Cellar Earnings</span>
-                  <span className='cellar-text-4'>$1.234M</span>
-                  <span className='cellar-text-3'>24hr Volume</span>
-                  <span className='cellar-text-4'>$1.234M</span>
+            <div className='cellar-item__body'>
+              <div className='cellar-item__body-row'>
+                <div className='cellar-item__body-key'>
+                  TVL
+                </div>
+                <div className='cellar-item__body-value'>
+                  $238,921.00
                 </div>
               </div>
-              <div className='cellar-board-right'>
-                <div className='cellar-board-body'>
-                  <span className='cellar-text-2'>Lifetime Performance</span>
-                  <span className='cellar-text-3'>Lifetime Earnings</span>
-                  <span className='cellar-text-4'>$1.234M</span>
-                  <span className='cellar-text-3'>Total Value Locked(TVL)</span>
-                  <span className='cellar-text-4'>$12.020M</span>
+              <div className='cellar-item__body-row'>
+                <div className='cellar-item__body-key'>
+                  7d Earnings
+                </div>
+                <div className='cellar-item__body-value green'>
+                  $23,242.00
                 </div>
               </div>
+              <div className='cellar-item__body-row'>
+                <div className='cellar-item__body-key'>
+                  Life Earnings
+                </div>
+                <div className='cellar-item__body-value green'>
+                  $145,793.00
+                </div>
+              </div>
+              <div className='cellar-item__body-divider'></div>
+              <a href='https://app.sommelier.finance' className='cellar-add-liquidity-button'>Add Liquidity</a>
             </div>
           </div>
         </div>
@@ -244,44 +245,54 @@ export default function Main() {
           </a>
         </div>
         <div className='main-cellar__right-container'>
-          {[0, 1].map((item) => (
+          {[0].map((item) => (
             <div className='cellar-item' key={`cellar-item-${item}`}>
               <div className='cellar-item__header'>
-                {/* <div className='cellar-item__header__badge'>
-                  <div className='cellar-badge'>
-                    Highlighted
+                <div className='cellar-item__header__title'>
+                  <div className='cellar-item__header__title-title'>
+                    USDC-ETH
+                    <img src={infoCircleImg} />
                   </div>
-                </div> */}
-                <div className='cellar-item__header__icon'>
-                  <img src={ethImg}/>
-                  <img src={usdcImg}/>
+                  <div className='cellar-item__header__title-icon'>
+                    <img src={ethImg}/>
+                    <img src={usdcImg}/>
+                  </div>
                 </div>
-                <div className='cellar-item__header__pool'>
-                  ETH/USDC
+                <div className='cellar-item__header__badge'>
+                  <div className='cellar-item__header__badge-item magenta'>1WEEK</div>
+                  <div className='cellar-item__header__badge-item blue'>0.05%</div>
+                  <div className='cellar-item__header__badge-item purple'>2SD</div>
+                  <div className='cellar-item__header__badge-item transparent'>Uniswapv3</div>
                 </div>
               </div>
               <div className='cellar-item__body'>
-                <span>Recent Performance</span>
-                <div className='cellar-pool-detail'>
-                  <div className='cellar-pool-detail-title'>
-                    7d Cellar Earnings
+                <div className='cellar-item__body-row'>
+                  <div className='cellar-item__body-key'>
+                    TVL
                   </div>
-                  <div className='cellar-pool-detail-value'>
-                    $1M
-                  </div>
-                </div>
-                <div className='cellar-pool-detail'>
-                  <div className='cellar-pool-detail-title'>
-                    24h Volume
-                  </div>
-                  <div className='cellar-pool-detail-value'>
-                    $1.234M
+                  <div className='cellar-item__body-value'>
+                    $238,921.00
                   </div>
                 </div>
+                <div className='cellar-item__body-row'>
+                  <div className='cellar-item__body-key'>
+                    7d Earnings
+                  </div>
+                  <div className='cellar-item__body-value green'>
+                    $23,242.00
+                  </div>
+                </div>
+                <div className='cellar-item__body-row'>
+                  <div className='cellar-item__body-key'>
+                    Life Earnings
+                  </div>
+                  <div className='cellar-item__body-value green'>
+                    $145,793.00
+                  </div>
+                </div>
+                <div className='cellar-item__body-divider'></div>
+                <a href='https://app.sommelier.finance' className='cellar-add-liquidity-button'>Add Liquidity</a>
               </div>
-              {/* <div className='cellar-item__footer'>
-                <a href='https://app.sommelier.finance/' target='_blank' className='add-liquidity-button'>Add Liquidity</a>
-              </div> */}
             </div>
           ))}
         </div>

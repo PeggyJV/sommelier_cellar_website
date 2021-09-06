@@ -162,10 +162,14 @@
     .new {
       @include text-content();
     }
+    .sommelier {
+      font-size: 60px !important;
+    }
     .cellars {
       // background: -webkit-linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
       // -webkit-background-clip: text;
       // -webkit-text-fill-color: transparent;
+      font-size: 60px !important;
       color: $white;
       margin-top: -25px;
       @include respond-to(mobile) {

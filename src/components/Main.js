@@ -91,10 +91,10 @@ export default function Main() {
   );
 
   const cellBoardStyle= {
-    backgroundImage: `url(${spiral2Img})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center center',
-    backgroundSize: 'contain'
+    // backgroundImage: `url(${spiral2Img})`,
+    // backgroundRepeat: 'no-repeat',
+    // backgroundPosition: 'center center',
+    // backgroundSize: 'contain'
   }
 
   return (

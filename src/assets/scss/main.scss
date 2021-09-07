@@ -165,6 +165,17 @@
     .sommelier {
       font-size: 60px !important;
       font-family: $font-family-barlow-bold !important;
+      @include respond-to(mobile) {
+        font-size: 35px !important;
+      }
+    }
+    .sub-title {
+      max-width: 431px;
+      @include respond-to(mobile) {
+        font-size: 20px !important;
+        line-height: 25px !important;
+        max-width: 207px;
+      }
     }
     .cellars {
       // background: -webkit-linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
@@ -176,6 +187,7 @@
       margin-top: -25px;
       @include respond-to(mobile) {
         margin-top: -15px;
+        font-size: 35px !important;
       }
     }
     .launch-button {
@@ -561,6 +573,9 @@
     h3 {
       margin-top: 30px;
       text-align: center;
+      @include respond-to(mobile) {
+        margin-top: 10px;
+      }
     }
     .add-liquidity-button {
       @include text-button();
@@ -580,6 +595,7 @@
         height: 42px;
         border-radius: 11px;
         font-size: 16px !important;
+        margin-top: 10px;
       }
     }
   }
@@ -606,13 +622,18 @@
     h2 {
       color: $text-black;
       margin-bottom: 43px;
+      font-size: 35px !important;
+      padding-left: 50px;
+      padding-right: 50px;
 
       @include respond-to(tablet) {
         margin-bottom: 90px;
+        font-size: 60px !important;
       }
 
       @include respond-to(desktop) {
         margin-bottom: 52px;
+        font-size: 60px !important;
       }
     }
 
@@ -699,9 +720,11 @@
     h2 {
       margin-bottom: 115px;
       text-align: center;
+      font-size: 60px !important;
 
       @include respond-to(mobile) {
         margin-bottom: 30px;
+        font-size: 35px !important;
       }
     }
 
@@ -1205,6 +1228,10 @@
     // @include respond-to(tablet) {
     //   flex-direction: row;
     // }
+    @include respond-to(mobile) {
+      margin-top: 73px;
+    }
+
     @include respond-to(desktop) {
       flex-direction: row;
       justify-content: space-between;
@@ -1227,6 +1254,10 @@
     .sommelier {
       @include font-base($font-family-barlow-bold, normal, bold);
       font-size: 60px !important;
+
+      @include respond-to(mobile) {
+        font-size: 35px !important;
+      }
     }
     .cellars {
       background: -webkit-linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
@@ -1237,6 +1268,12 @@
         margin-top: -15px;
       }
     }
+    .sub-title {
+      @include respond-to(mobile) {
+        font-size: 20px !important;
+      }
+    }
+
     .launch-button {
       @include text-button();
       margin-top: 41px;
@@ -1273,8 +1310,8 @@
   border: 2px solid #3F2574;
   box-sizing: border-box;
   border-radius: $mobile-border-radius;
-  width: 452px;
-  min-height: 514px;
+  width: 337px;
+  min-height: 454px;
 
   margin-bottom: 15px;
   margin-left: 0px;
@@ -1286,6 +1323,7 @@
   @include respond-to(tablet) {
     width: 452px;
     border-radius: $desktop-border-radius;
+    min-height: 514px;
   }
 
   @include respond-to(desktop) {
@@ -1293,6 +1331,7 @@
     margin-bottom: 0px;
     margin-left: 20px;
     width: 452px;
+    min-height: 514px;
   }
 
   &__header {
@@ -1300,8 +1339,8 @@
     border-bottom: 2px solid #3F2574;
     box-sizing: border-box;
     border-radius: $mobile-border-radius $mobile-border-radius 0px 0px;
-    min-height: 211px;
-    padding: 20px 26px;
+    min-height: 158px;
+    padding: 19px 19px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1312,9 +1351,13 @@
 
     @include respond-to(tablet) {
       border-radius: $desktop-border-radius $desktop-border-radius 0px 0px;
+      padding: 20px 26px;
+      min-height: 211px;
     }
     @include respond-to(desktop) {
       border-radius: $desktop-border-radius $desktop-border-radius 0px 0px;
+      padding: 20px 26px;
+      min-height: 211px;
     }
 
     &__title {
@@ -1334,8 +1377,8 @@
         }
 
         @include font-base($font-family-source, normal, 400);
-        font-size: 39.7363px;
-        line-height: 66px;
+        font-size: 29.6264px;
+        line-height: 49px;
         text-align: center;
         letter-spacing: 0.496703px;
         color: $white;
@@ -1362,8 +1405,8 @@
         }
 
         img {
-          width: 53px;
-          height: 53px;
+          width: 39px;
+          height: 39px;
           z-index: 400;
           &:first-child {
             margin-right: -8px;
@@ -1396,6 +1439,11 @@
         margin-bottom: 13px;
         border-radius: 6.62271px;
 
+        @include respond-to(mobile) {
+          font-size: 14.8132px;
+          line-height: 20px;
+        }
+
         &.magenta {
           background: #752590;
         }
@@ -1420,7 +1468,7 @@
   }
 
   &__body {
-    padding: 44px 26px;
+    padding: 31px 26px;
     @include respond-to(tablet) {
       padding: 44px 26px;
     }
@@ -1435,6 +1483,11 @@
       font-size: 19.8681px;
       line-height: 26px;
       margin-bottom: 26px;
+
+      @include respond-to(mobile) {
+        font-size: 14.8132px;
+        line-height: 20px;
+      }
     }
 
     &-key {
@@ -1455,6 +1508,10 @@
       height: 1.6px;
       margin-top: 13px;
       margin-bottom: 44px;
+
+      @include respond-to(mobile) {
+        margin-bottom: 30px;
+      }
     }
 
     .cellar-add-liquidity-button {
@@ -1471,6 +1528,12 @@
       line-height: 40px;
       color: $white;
       text-decoration: none;
+
+      @include respond-to(mobile) {
+        font-size: 19.7509px;
+        line-height: 30px;
+        height: 50px;
+      }
     }
   }
   &__footer {

@@ -107,7 +107,7 @@ export default function Main() {
           <h1 className='d-block cellars'>
             Cellars
           </h1>
-          <p className='sub-title mt-3'>Automated Liquidity Management<br/>for Decentralized Finance</p>
+          <p className='sub-title'>Automated Liquidity Management for Decentralized Finance</p>
           <a href="https://app.sommelier.finance" className='launch-button' target="_blank">
             <span>Add Liquidity</span>
           </a>

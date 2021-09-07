@@ -824,6 +824,10 @@
     margin-right: auto;
     height: 1.16px;
     background: $divider;
+
+    @include respond-to(mobile) {
+      display: none;
+    }
   }
 
   // Roadmap
@@ -1223,7 +1227,7 @@
     flex-direction: column;
     padding-left: 50px;
     padding-right: 50px;
-    padding-bottom: 73px;
+    padding-bottom: 73px; 
     margin-top: 200px;
     // @include respond-to(tablet) {
     //   flex-direction: row;

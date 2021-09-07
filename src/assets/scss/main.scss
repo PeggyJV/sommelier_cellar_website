@@ -1275,9 +1275,9 @@
   margin-bottom: 15px;
   margin-left: 0px;
 
-  &.top {
-    background: rgba(49, 30, 89, 1);
-  }
+  // &.top {
+  //   background: rgba(49, 30, 89, 1);
+  // }
 
   @include respond-to(tablet) {
     width: 452px;
@@ -1302,9 +1302,9 @@
     flex-direction: column;
     align-items: center;
 
-    &.top {
-      background: rgba(63, 37, 116, 1);
-    }
+    // &.top {
+    //   background: rgba(63, 37, 116, 1);
+    // }
 
     @include respond-to(tablet) {
       border-radius: $desktop-border-radius $desktop-border-radius 0px 0px;

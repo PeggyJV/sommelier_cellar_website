@@ -164,12 +164,14 @@
     }
     .sommelier {
       font-size: 60px !important;
+      font-family: $font-family-barlow-bold !important;
     }
     .cellars {
       // background: -webkit-linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
       // -webkit-background-clip: text;
       // -webkit-text-fill-color: transparent;
       font-size: 60px !important;
+      font-family: $font-family-barlow-bold !important;
       color: $white;
       margin-top: -25px;
       @include respond-to(mobile) {
@@ -1220,7 +1222,8 @@
       @include text-content();
     }
     .sommelier {
-      @include font-base($font-family-barlow, normal, bold);
+      @include font-base($font-family-barlow-bold, normal, bold);
+      font-size: 60px !important;
     }
     .cellars {
       background: -webkit-linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);

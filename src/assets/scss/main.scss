@@ -186,8 +186,10 @@
       height: 59px;
       @include respond-to(mobile) {
         margin-top: 1rem;
-        width: 104px;
-        height: 26.45px;
+        width: 144px;
+        height: 42px;
+        border-radius: 11.1538px;
+        font-size: 16px !important;
       }
     }
   }
@@ -574,9 +576,10 @@
       height: 59px;
 
       @include respond-to(mobile) {
-        width: 104px;
-        height: 26.45px;
-        border-radius: 10.5px;
+        width: 144px;
+        height: 42px;
+        border-radius: 11px;
+        font-size: 16px !important;
       }
     }
   }
@@ -1245,9 +1248,10 @@
       }
       @include respond-to(mobile) {
         margin-top: 1rem;
-        width: 104px;
-        height: 26.45px;
-        border-radius: 10.5px;
+        width: 144px;
+        height: 42px;
+        border-radius: 11px;
+        font-size: 16px !important;
       }
     }
   }
@@ -1296,7 +1300,7 @@
     border-bottom: 2px solid #3F2574;
     box-sizing: border-box;
     border-radius: $mobile-border-radius $mobile-border-radius 0px 0px;
-    height: 211px;
+    min-height: 211px;
     padding: 20px 26px;
     display: flex;
     flex-direction: column;

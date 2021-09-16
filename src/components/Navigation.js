@@ -5,16 +5,35 @@ import {isMobileOnly} from 'react-device-detect'
 
 import logoImg from '@images/logo.png'
 import spiralImg from '@images/spiral-2.png'
+import notificationOffImg from '@images/notification-off.png';
+import notificationOnImg from '@images/notification-on.png';
+
+import { usePopperTooltip } from 'react-popper-tooltip';
+import 'react-popper-tooltip/dist/styles.css';
 
 import cn from 'classnames';
 
 const Nav = ({ settings, lang, pathname }) => {
   const [showMenu, setShowMenu] = React.useState(isMobileOnly ? false : true);
   const [menu, setMenu] = useState('features');
+  
+  const [notification, setNotification] = useState(false);
+  const [notificationErrMsg, setNotificationErrMsg] = useState('');
+
+  const {
+    getArrowProps,
+    getTooltipProps,
+    setTooltipRef,
+    setTriggerRef,
+    visible,
+  } = usePopperTooltip();
 
   useEffect(() => {
-    const url = window.location.href;
-    console.log(url);
+    let url = '';
+    if (typeof window !== `undefined`) {
+      url = window.location.href;
+      console.log(url);
+    }
 
     if (url.includes('features')) {
       setMenu('features');
@@ -34,6 +53,8 @@ const Nav = ({ settings, lang, pathname }) => {
     if (url.includes('events')) {
       setMenu('events');
     }
+
+    checkNotificationPermission();
   }, []);
 
   const handleHamburger = () => {
@@ -50,6 +71,107 @@ const Nav = ({ settings, lang, pathname }) => {
         setMenu(msgId);
       }
     }
+  }
+
+  const checkNotificationPermission = () => {
+    console.info('starting.....');
+    if (typeof window === `undefined`) {
+      setNotification(false);
+      return;
+    }
+
+    if (!("Notification" in window)) {
+      setNotification(false);
+      setNotificationErrMsg('This browser does not support notifications.');
+      return;
+    }
+
+    console.log('notification permission', Notification.permission);
+    if (Notification.permission === 'denied') {
+      setNotification(false);
+      setNotificationErrMsg('To allow Notifications, go to your Browser Settings.');
+      return;
+    }
+
+    if (Notification.permission === 'default') {
+      setNotification(false);
+      return;
+    }
+
+    if (Notification.permission === 'granted') {
+      setNotification(true);
+
+      enableNotifications();
+    }
+  }
+
+  const askNotificationPermission = () => {
+    if (typeof window === `undefined`) {
+      return;
+    }
+
+    if (!("Notification" in window)) {
+      setNotification(false);
+      setNotificationErrMsg('This browser does not support notifications.');
+    } else {
+      if(checkNotificationPromise()) {
+        Notification.requestPermission()
+        .then((permission) => {
+          checkNotificationPermission();
+        })
+      } else {
+        Notification.requestPermission(function(permission) {
+          checkNotificationPermission();
+        });
+      }
+    }
+  }
+
+  const checkNotificationPromise = () => {
+    try {
+      Notification.requestPermission().then();
+    } catch(e) {
+      return false;
+    }
+
+    return true;
+  }
+
+  const toggleNotification = (e) => {
+    e.preventDefault();
+
+    console.log(Notification.permission);
+
+    if (notification === false) {
+      askNotificationPermission();
+    } else {
+
+    }
+  }
+
+  const enableNotifications = async () => {
+    if (typeof window === `undefined`) {
+      return;
+    }
+console.log('11111111111111111');
+    if (!('serviceWorker' in navigator)) {
+      return;
+    }
+    console.log('2222222222222222222');
+    if (!('PushManager' in window)) {
+      return;
+    }
+    console.log('33333333333333333');
+    console.log(navigator);
+
+    const sw = await navigator.serviceWorker.ready;
+    console.log(sw);
+    const result = await sw.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: 'BNDpN_mS7a-Os4xUorT-NPjhgRpgK7GoWsggHFF5psOTgbn5SPeo_G6rJeFzjqtVazgmt5bZDdHrsrGZH4uSJkE'
+    });
+    
+    console.log('service worker', result);
   }
 
   return (
@@ -117,10 +239,30 @@ const Nav = ({ settings, lang, pathname }) => {
                     {`Resource`}
                   </Link>
                 </li>
-                <li key={7} className={cn('nav-menu-item', { active: menu === 'events' })}>
+                <li key={7} className={cn({ active: menu === 'events' })}>
                   <Link to={`/events/`} className={cn('nav-menu-item', { active: menu === 'events' })}>
                     {`Event`}
                   </Link>
+                </li>
+                <li key={8}>
+                    <a
+                      className='nav-menu-item'
+                      onClick={(e) => toggleNotification(e)}
+                      ref={setTriggerRef}
+                    >
+                      {!notification && <img src={notificationOffImg} height={27} />}
+                      {notification && <img src={notificationOnImg} height={27} />}
+                     
+                    </a>
+                    {visible && !notification && notificationErrMsg && (
+                      <div
+                        ref={setTooltipRef}
+                        {...getTooltipProps({ className: 'tooltip-container' })}
+                      >
+                        <div {...getArrowProps({ className: 'tooltip-arrow' })} />
+                        {notificationErrMsg}  
+                      </div>
+                    )}
                 </li>
 
                 <li key={999} className='d-flex align-items-center'>

@@ -1,5 +1,3 @@
-if (typeof window !== `undefined`) {
-    window.self.addEventListener('push', () => {
-        window.self.registration.showNotification('My Gatsby Notification', {})
-    })
-}
+self.addEventListener('push', () => {
+    self.registration.showNotification('My Gatsby Notification', {})
+})

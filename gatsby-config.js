@@ -38,6 +38,7 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `static/images/etherium.png`, // This path is relative to the root of the site.
+        gcm_sender_id: `29128146586`
       },
     },
     {

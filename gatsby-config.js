@@ -44,6 +44,7 @@ module.exports = {
       resolve: `gatsby-plugin-offline`,
       options: {
         precachePages: [`/blog/*`],
+        appendScript: require.resolve(`./src/custom-sw-code.js`)
       },
     },
     {
@@ -71,4 +72,7 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
+  flags: {
+    PARALLEL_QUERY_RUNNING: true
+  }
 }

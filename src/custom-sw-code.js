@@ -2,8 +2,10 @@ self.addEventListener('push', (ev) => {
     let title = 'Sommelier Cellar';
     let content = 'Sommelier Cellar Event';
 
+    console.log('notification payload', ev);
     if (ev && 'data' in ev) {
         const data = ev.data.json();
+        console.log('notification payload data', data);
         if (data) {
             title = data.title;
             content = data.content;

@@ -166,12 +166,23 @@ console.log('11111111111111111');
 
     const sw = await navigator.serviceWorker.ready;
     console.log(sw);
-    const result = await sw.pushManager.subscribe({
+    const subscription = await sw.pushManager.subscribe({
       userVisibleOnly: true,
       applicationServerKey: 'BNDpN_mS7a-Os4xUorT-NPjhgRpgK7GoWsggHFF5psOTgbn5SPeo_G6rJeFzjqtVazgmt5bZDdHrsrGZH4uSJkE'
     });
+    
+    const apiBaseUrl = 'http://34.72.40.165/api';
+    // const apiBaseUrl = 'http://localhost:8001/api';
 
-    console.log('service worker', result);
+    await fetch(`${apiBaseUrl}/subscribe`, {
+      method: 'POST',
+      body: JSON.stringify(subscription),
+      headers: {
+        'content-type': 'application/json'
+      }
+    });
+
+    console.log('service worker', subscription);
   }
 
   return (

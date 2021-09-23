@@ -16,7 +16,7 @@ import cn from 'classnames';
 const Nav = ({ settings, lang, pathname }) => {
   const [showMenu, setShowMenu] = React.useState(isMobileOnly ? false : true);
   const [menu, setMenu] = useState('features');
-  
+
   const [notification, setNotification] = useState(false);
   const [notificationErrMsg, setNotificationErrMsg] = useState('');
 
@@ -170,7 +170,7 @@ console.log('11111111111111111');
       userVisibleOnly: true,
       applicationServerKey: 'BNDpN_mS7a-Os4xUorT-NPjhgRpgK7GoWsggHFF5psOTgbn5SPeo_G6rJeFzjqtVazgmt5bZDdHrsrGZH4uSJkE'
     });
-    
+
     console.log('service worker', result);
   }
 
@@ -224,7 +224,7 @@ console.log('11111111111111111');
                 </li>
 
                 <li key={4} >
-                  <Link to={`https://t.me/getsomm`} className='nav-menu-item' target='new'>
+                  <Link to={`https://community.sommelier.finance/`} className='nav-menu-item' target='new'>
                     {`Community`}
                   </Link>
                 </li>
@@ -252,7 +252,7 @@ console.log('11111111111111111');
                     >
                       {!notification && <img src={notificationOffImg} height={27} />}
                       {notification && <img src={notificationOnImg} height={27} />}
-                     
+
                     </a>
                     {visible && !notification && notificationErrMsg && (
                       <div
@@ -260,7 +260,7 @@ console.log('11111111111111111');
                         {...getTooltipProps({ className: 'tooltip-container' })}
                       >
                         <div {...getArrowProps({ className: 'tooltip-arrow' })} />
-                        {notificationErrMsg}  
+                        {notificationErrMsg}
                       </div>
                     )}
                 </li>

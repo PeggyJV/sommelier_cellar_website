@@ -14,6 +14,7 @@ self.addEventListener('push', (ev) => {
 
     self.registration.showNotification(title, {
         body: content,
+        image: 'https://a.storyblok.com/f/104430/1200x674/bdcc5c7b57/som_layout_6.png',
         icon: 'https://sommelier-cellar-website-git-master-sommelierfinance.vercel.app/images/logo.png'
     })
 })

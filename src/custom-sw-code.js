@@ -1,6 +1,8 @@
 self.addEventListener('push', (ev) => {
     let title = 'Sommelier Cellar';
     let content = 'Sommelier Cellar Event';
+    let image = '';
+    let url = '';
 
     console.log('notification payload', ev);
     if (ev && 'data' in ev) {
@@ -9,12 +11,14 @@ self.addEventListener('push', (ev) => {
         if (data) {
             title = data.title;
             content = data.content;
+            image = data.image;
+            url = data.url;
         }
     }
 
     self.registration.showNotification(title, {
         body: content,
-        image: 'https://a.storyblok.com/f/104430/1200x674/bdcc5c7b57/som_layout_6.png',
+        image: image,
         icon: 'https://sommelier-cellar-website-git-master-sommelierfinance.vercel.app/images/logo.png'
     })
 })

@@ -171,7 +171,7 @@ console.log('11111111111111111');
       applicationServerKey: 'BNDpN_mS7a-Os4xUorT-NPjhgRpgK7GoWsggHFF5psOTgbn5SPeo_G6rJeFzjqtVazgmt5bZDdHrsrGZH4uSJkE'
     });
     
-    const apiBaseUrl = 'http://34.72.40.165/api';
+    const apiBaseUrl = 'https://msg.sommelier.finance/api';
     // const apiBaseUrl = 'http://localhost:8001/api';
 
     await fetch(`${apiBaseUrl}/subscribe`, {

@@ -24,8 +24,10 @@ self.addEventListener('push', (ev) => {
 self.addEventListener("notificationclick", (ev) => {
     ev.notification.close();
 
+    console.log(ev);
     if (ev && 'data' in ev) {
         const data = ev.data.json();
+        console.log(data);
         if (data) {
             clients.openWindow(data.url)
         }

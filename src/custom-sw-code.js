@@ -4,8 +4,10 @@ self.addEventListener('push', (ev) => {
     let image = '';
     let url = '';
 
+    console.log('event data', ev);
     if (ev && 'data' in ev) {
         const data = ev.data.json();
+        console.log('event content data', data);
         if (data) {
             title = data.title;
             content = data.content;
@@ -24,10 +26,10 @@ self.addEventListener('push', (ev) => {
 self.addEventListener("notificationclick", (ev) => {
     ev.notification.close();
 
-    console.log(ev);
+    console.log('click event data', ev);
     if (ev && 'data' in ev) {
         const data = ev.data.json();
-        console.log(data);
+        console.log('click event content data', data);
         if (data) {
             clients.openWindow(data.url)
         }

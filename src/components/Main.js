@@ -126,10 +126,8 @@ export default function Main() {
                 </div>
               </div>
               <div className='cellar-item__header__badge'>
-                <div className='cellar-item__header__badge-item magenta'>1WEEK</div>
-                <div className='cellar-item__header__badge-item blue'>0.05%</div>
-                <div className='cellar-item__header__badge-item purple'>2SD</div>
                 <div className='cellar-item__header__badge-item transparent'>Uniswapv3</div>
+                <div className='cellar-item__header__badge-item blue'>0.05%</div>
               </div>
             </div>
             <div className='cellar-item__body'>
@@ -259,10 +257,8 @@ export default function Main() {
                   </div>
                 </div>
                 <div className='cellar-item__header__badge'>
-                  <div className='cellar-item__header__badge-item magenta'>1WEEK</div>
-                  <div className='cellar-item__header__badge-item blue'>0.05%</div>
-                  <div className='cellar-item__header__badge-item purple'>2SD</div>
                   <div className='cellar-item__header__badge-item transparent'>Uniswapv3</div>
+                  <div className='cellar-item__header__badge-item blue'>0.05%</div>
                 </div>
               </div>
               <div className='cellar-item__body'>

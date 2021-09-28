@@ -20,19 +20,12 @@ self.addEventListener('push', (ev) => {
         body: content,
         image: image,
         icon: 'https://sommelier-cellar-website-git-master-sommelierfinance.vercel.app/images/logo.png',
-        url: link
+        data: link
     })
 })
 
 self.addEventListener("notificationclick", (ev) => {
     ev.notification.close();
-
-    console.log('click event data', ev);
-    if (ev && 'notification' in ev) {
-        const data = ev.notification.json();
-        console.log('click event content data', data);
-        if (data) {
-            clients.openWindow(data.url)
-        }
-    }
+    console.log(ev.notification.data);
+    clients.openWindow(ev.notification.data);
 })

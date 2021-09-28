@@ -1315,7 +1315,7 @@
   box-sizing: border-box;
   border-radius: $mobile-border-radius;
   width: 337px;
-  min-height: 454px;
+  min-height: 405px;
 
   margin-bottom: 15px;
   margin-left: 0px;
@@ -1343,11 +1343,11 @@
     border-bottom: 2px solid #3F2574;
     box-sizing: border-box;
     border-radius: $mobile-border-radius $mobile-border-radius 0px 0px;
-    min-height: 158px;
-    padding: 19px 19px;
+    min-height: 116px;
+    padding: 19px 19px 6px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
 
     // &.top {
     //   background: rgba(63, 37, 116, 1);
@@ -1356,12 +1356,12 @@
     @include respond-to(tablet) {
       border-radius: $desktop-border-radius $desktop-border-radius 0px 0px;
       padding: 20px 26px;
-      min-height: 211px;
+      min-height: 168px;
     }
     @include respond-to(desktop) {
       border-radius: $desktop-border-radius $desktop-border-radius 0px 0px;
       padding: 20px 26px;
-      min-height: 211px;
+      min-height: 168px;
     }
 
     &__title {
@@ -1434,14 +1434,16 @@
       margin-top: 10px;
 
       &-item {
-        padding: 2px 8px;
         @include font-base($font-family-lato, normal, 400);
         font-size: 19.8681px;
         line-height: 26px;
         color: $white;
-        margin-right: 20px;
+        margin-right: 14.51px;
         margin-bottom: 13px;
         border-radius: 6.62271px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         @include respond-to(mobile) {
           font-size: 14.8132px;
@@ -1460,12 +1462,15 @@
         &.blue {
           background: #1F3C8E;
           border-radius: 4px;
+          width: 86.49px;
+          height: 33.11px;
         }
 
         &.transparent {
           border: 1.65568px solid #E8006F;
           background: transparent;
-          padding: 3.31136px 13.2454px;
+          width: 134.49px;
+          height: 33.11px;
         }
       }
     }

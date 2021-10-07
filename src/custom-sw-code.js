@@ -4,6 +4,11 @@ self.addEventListener('push', (ev) => {
     let image = '';
     let link = '';
 
+    localStorage.setItem('notification', 'show');
+    const show = localStorage.getItem('notification');
+
+    console.log('show', show);
+
     console.log('event data', ev);
     if (ev && 'data' in ev) {
         const data = ev.data.json();

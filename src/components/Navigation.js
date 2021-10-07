@@ -153,19 +153,16 @@ const Nav = ({ settings, lang, pathname }) => {
     if (typeof window === `undefined`) {
       return;
     }
-console.log('11111111111111111');
+
     if (!('serviceWorker' in navigator)) {
       return;
     }
-    console.log('2222222222222222222');
+
     if (!('PushManager' in window)) {
       return;
     }
-    console.log('33333333333333333');
-    console.log(navigator);
 
     const sw = await navigator.serviceWorker.ready;
-    console.log(sw);
     const subscription = await sw.pushManager.subscribe({
       userVisibleOnly: true,
       applicationServerKey: 'BNDpN_mS7a-Os4xUorT-NPjhgRpgK7GoWsggHFF5psOTgbn5SPeo_G6rJeFzjqtVazgmt5bZDdHrsrGZH4uSJkE'

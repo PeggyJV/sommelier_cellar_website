@@ -100,7 +100,8 @@ li { color: purple; }
       }
       img {
         width: 100%;
-        margin-left: 2.75rem; // 44px
+        // margin-left: 2.75rem; // 44px
+        margin-left: 10px; // 44px
 
         border-radius: 1.25rem; // 20px
         @include respond-to(desktop) {
@@ -112,7 +113,7 @@ li { color: purple; }
       }
       div {
         text-align: left;
-        padding: 0px;
+        padding: 10px 30px;
         @include respond-to(mobile) {
           text-align: left;
         }
@@ -196,6 +197,7 @@ li { color: purple; }
       margin-top: 102px;
       @include respond-to(mobile) {
         overflow: scroll;
+        margin-top: 42px;
         // margin-left: -2.75rem;
         // margin-right: -2.75rem;
       }

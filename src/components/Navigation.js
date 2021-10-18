@@ -66,7 +66,9 @@ const Nav = ({ settings, lang, pathname }) => {
   const handleMoveToSection = (e, msgId) => {
     if (pathname === '/') { // Only apply to home page
       e.preventDefault();
-      setShowMenu(false);
+      if (isMobileOnly) {
+        setShowMenu(false);
+      }
       const ref = document.querySelector(`#${msgId}`);
       if (ref) {
         ref.scrollIntoView({ behavior: "smooth", block: "center" });

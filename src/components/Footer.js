@@ -1,26 +1,44 @@
 import React from "react"
 import SbEditable from "storyblok-react"
 
-import invest1Img from '@images/investors/invest-1.png'
-import invest2Img from '@images/investors/invest-2.png'
-import invest3Img from '@images/investors/invest-3.png'
-import invest4Img from '@images/investors/invest-4.png'
-
 import twitterImg from '@images/social/twitter.png'
 import githubImg from '@images/social/github.png'
 import discordImg from '@images/social/discord.png'
 import telegramImg from '@images/social/telegram.png'
+
+import investPolychain from '@images/investors/Polychain.png'
+import investStandarCrypto from '@images/investors/StandardCrypto.png'
+import investAlameda from '@images/investors/Alameda.png'
+import investMulticoin from '@images/investors/Multichain.png'
+import investCyg from '@images/investors/cygnilabs.png'
+import investD from '@images/investors/D1.png'
+import investTendermint from '@images/investors/Tendermint.png'
+import investByzantine from '@images/investors/Byzantine.png'
+import investZola from '@images/investors/Zola.png'
 
 const Footer = () => {
   return (
     <footer className="text-center flex flex-col items-center py-20 mx-auto">
       <div className='footer-investors section-container'>
         <h2 className="text-center">Investors</h2>
+        <div className='footer-investors__img-container type2'>
+          <img src={investPolychain} />
+        </div>
         <div className='footer-investors__img-container'>
-          <img src={invest1Img} />
-          <img src={invest2Img} />
-          <img src={invest3Img} />
-          <img src={invest4Img}/>
+          <img src={investStandarCrypto} />
+          <img src={investAlameda} />
+        </div>
+        <div className='footer-investors__img-container'>
+          <img src={investMulticoin} />
+          <img src={investCyg} />
+        </div>
+        <div className='footer-investors__img-container'>
+          <img src={investD} />
+          <img src={investTendermint} />
+        </div>
+        <div className='footer-investors__img-container'>
+          <img src={investByzantine} />
+          <img src={investZola} />
         </div>
       </div>
       <div className='footer_container'>

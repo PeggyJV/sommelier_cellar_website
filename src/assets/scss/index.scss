@@ -235,6 +235,9 @@ footer {
     background: $text-black;
     padding-top: 130px;
     padding-bottom: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @include respond-to(mobile) {
       padding-top: 42px;
@@ -250,27 +253,45 @@ footer {
       }
     }
     .footer-investors__img-container {
+      max-width: 1128px;
+      height: 114px;
       margin-top: 6.125rem;
       // display: flex;
       // flex-direction: row;
       // justify-content: space-around;
       padding-left: 85px;
       padding-right: 85px;
+      display: flex;
+      justify-content: space-between;
+
+      &.type2 {
+        height: 225px;
+
+        @include respond-to(mobile) {
+          height: fit-content;
+        }
+      }
 
       img {
         margin-left: 25px;
         margin-right: 25px;
         margin-bottom: 55px;
-
-        // height: 33px;
-        // height: 73px;
+        height: 100%;
+        
+        @include respond-to(mobile) {
+          width: 100%;
+          height: auto;
+          margin-bottom: 0px;
+          margin-top: 20px;
+        }
       }
 
       @include respond-to(mobile) {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 30px;
+        margin-top: 0px;
+        height: fit-content;
       }
     }
   }

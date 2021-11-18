@@ -22,7 +22,7 @@ const Footer = () => {
       <div className='footer-investors section-container'>
         <h2 className="text-center">Investors</h2>
         <div className='footer-investors__img-container type2'>
-          <img src={investPolychain} />
+          <img src={investPolychain} className='type2' />
         </div>
         <div className='footer-investors__img-container'>
           <img src={investStandarCrypto} />

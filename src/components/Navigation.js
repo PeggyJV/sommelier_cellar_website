@@ -54,6 +54,9 @@ const Nav = ({ settings, lang, pathname }) => {
     if (url.includes('events')) {
       setMenu('events');
     }
+    if (url.includes('jobs')) {
+      setMenu('jobss');
+    }
 
     askNotificationPermission();
     // checkNotificationPermission();
@@ -261,7 +264,12 @@ const Nav = ({ settings, lang, pathname }) => {
                     {`Event`}
                   </Link>
                 </li>
-                <li key={8}>
+                <li key={8} className={cn({ active: menu === 'jobs' })}>
+                  <Link to={`/jobs/`} className={cn('nav-menu-item', { active: menu === 'jobs' })}>
+                    {`Jobs`}
+                  </Link>
+                </li>
+                <li key={9}>
                     <a
                       className='nav-menu-item'
                       onClick={(e) => toggleNotification(e)}

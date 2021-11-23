@@ -136,7 +136,7 @@ export default function Main() {
                   TVL
                 </div>
                 <div className='cellar-item__body-value'>
-                  $238,921.00
+                  $0
                 </div>
               </div>
               <div className='cellar-item__body-row'>
@@ -144,7 +144,7 @@ export default function Main() {
                   7d Earnings
                 </div>
                 <div className='cellar-item__body-value green'>
-                  $23,242.00
+                  $0
                 </div>
               </div>
               <div className='cellar-item__body-row'>
@@ -152,7 +152,7 @@ export default function Main() {
                   Life Earnings
                 </div>
                 <div className='cellar-item__body-value green'>
-                  $145,793.00
+                  $0
                 </div>
               </div>
               <div className='cellar-item__body-divider'></div>
@@ -267,7 +267,7 @@ export default function Main() {
                     TVL
                   </div>
                   <div className='cellar-item__body-value'>
-                    $238,921.00
+                    $0
                   </div>
                 </div>
                 <div className='cellar-item__body-row'>
@@ -275,7 +275,7 @@ export default function Main() {
                     7d Earnings
                   </div>
                   <div className='cellar-item__body-value green'>
-                    $23,242.00
+                    $0
                   </div>
                 </div>
                 <div className='cellar-item__body-row'>
@@ -283,7 +283,7 @@ export default function Main() {
                     Life Earnings
                   </div>
                   <div className='cellar-item__body-value green'>
-                    $145,793.00
+                    $0
                   </div>
                 </div>
                 <div className='cellar-item__body-divider'></div>

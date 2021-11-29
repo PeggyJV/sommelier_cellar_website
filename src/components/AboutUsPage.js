@@ -95,13 +95,13 @@ const teamMembers = [
     twitter: 'https://twitter.com/sandbochs',
     linkedin: 'https://www.linkedin.com/in/elliotshiu/'
   },
-  {
-    name: 'Levi Cook',
-    role: 'Core Protocol Engineer',
-    avatar: photoLevi,
-    twitter: 'https://twitter.com/levicook',
-    linkedin: 'https://www.linkedin.com/in/levicook/'
-  },
+  // {
+  //   name: 'Levi Cook',
+  //   role: 'Core Protocol Engineer',
+  //   avatar: photoLevi,
+  //   twitter: 'https://twitter.com/levicook',
+  //   linkedin: 'https://www.linkedin.com/in/levicook/'
+  // },
   {
     name: 'Ukpai Ugochi',
     role: 'Rust Developer',
@@ -109,13 +109,13 @@ const teamMembers = [
     twitter: 'https://twitter.com/hannydevelop',
     linkedin: 'https://www.linkedin.com/in/ugochi-ukpai-1361b0198/'
   },
-  {
-    name: 'Joshua Philippe',
-    role: 'Design Lead',
-    avatar: photoJoshua,
-    twitter: 'https://twitter.com/shua_lippe',
-    linkedin: 'https://www.linkedin.com/in/joshuaphilippe/'
-  }
+  // {
+  //   name: 'Joshua Philippe',
+  //   role: 'Design Lead',
+  //   avatar: photoJoshua,
+  //   twitter: 'https://twitter.com/shua_lippe',
+  //   linkedin: 'https://www.linkedin.com/in/joshuaphilippe/'
+  // }
 ]
 
 const featuresData = [

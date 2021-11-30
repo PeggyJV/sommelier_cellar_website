@@ -13,22 +13,17 @@ import "../assets/scss/main.scss"
 // const slidesToShowPlugin = Carousel.slidesToShowPlugin
 
 import welcomeBg from '@images/welcome.png'
-import spiral1Img from '@images/spiral-1.png'
 import spiral2Img from '@images/spiral-2.png'
-import coinsImg from '@images/coins.png'
 
 import photoZaki from '@images/team/zaki.png'
 import photoJack from '@images/team/jack.png'
 import photoKevin from '@images/team/kevin.png'
 import photoTony from '@images/team/tony.png'
-import photoJustin from '@images/team/justin.png'
-import photoDeborah from '@images/team/deborah.png'
 import photoLucky from '@images/team/lucky.png'
 import photoMantas from '@images/team/mantas.png'
 import photoElliot from '@images/team/elliot.png'
-import photoLevi from '@images/team/levi.png'
 import photoUkpai from '@images/team/ukpai.png'
-import photoJoshua from '@images/team/joshua.png'
+import photoEric from '@images/team/eric.png'
 
 // Team
 const teamMembers = [
@@ -60,20 +55,6 @@ const teamMembers = [
     twitter: 'https://twitter.com/bascule',
     linkedin: 'https://www.linkedin.com/in/tarcieri'
   },
-  // {
-  //   name: 'Justin Kilpatrick',
-  //   role: 'Co-Founder',
-  //   avatar: photoJustin,
-  //   twitter: 'https://twitter.com/ttk314',
-  //   linkedin: 'https://www.linkedin.com/in/kilpatrickjustin/'
-  // },
-  // {
-  //   name: 'Deborah Simpier',
-  //   role: 'Co-Founder',
-  //   avatar: photoDeborah,
-  //   twitter: 'https://twitter.com/DeborahSimpier',
-  //   linkedin: 'https://www.linkedin.com/in/deborah-simpier-a88063169/'
-  // },
   {
     name: 'Lucky Odisetti',
     role: 'Product Lead',
@@ -95,13 +76,6 @@ const teamMembers = [
     twitter: 'https://twitter.com/sandbochs',
     linkedin: 'https://www.linkedin.com/in/elliotshiu/'
   },
-  // {
-  //   name: 'Levi Cook',
-  //   role: 'Core Protocol Engineer',
-  //   avatar: photoLevi,
-  //   twitter: 'https://twitter.com/levicook',
-  //   linkedin: 'https://www.linkedin.com/in/levicook/'
-  // },
   {
     name: 'Ukpai Ugochi',
     role: 'Rust Developer',
@@ -109,13 +83,13 @@ const teamMembers = [
     twitter: 'https://twitter.com/hannydevelop',
     linkedin: 'https://www.linkedin.com/in/ugochi-ukpai-1361b0198/'
   },
-  // {
-  //   name: 'Joshua Philippe',
-  //   role: 'Design Lead',
-  //   avatar: photoJoshua,
-  //   twitter: 'https://twitter.com/shua_lippe',
-  //   linkedin: 'https://www.linkedin.com/in/joshuaphilippe/'
-  // }
+  {
+    name: 'Eric Bolten',
+    role: 'Senior Software Engineer',
+    avatar: photoEric,
+    twitter: 'https://twitter.com/ebolten',
+    linkedin: 'https://www.linkedin.com/in/ericbolten/'
+  },
 ]
 
 const featuresData = [

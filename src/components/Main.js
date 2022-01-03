@@ -99,7 +99,7 @@ export default function Main() {
 
   return (
     <div className='mt-5 main-container'>
-      <div className='main-top'>
+      {/* <div className='main-top'>
         <div className='main-top__left-container' style={{ marginBottom: 20 }}>
           <h1 className='d-block sommelier'>
             Sommelier
@@ -160,7 +160,7 @@ export default function Main() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <a name="features" id='features'></a>
 
       <div className='main-welcome-why'>
@@ -232,7 +232,7 @@ export default function Main() {
 
       <div className='main-divider'></div>
 
-      <div className='main-cellar'>
+      {/* <div className='main-cellar'>
         <div className='main-cellar__left-container'>
           <h1 className='d-block sommelier'>
             Sommelier<br/>Cellars
@@ -294,7 +294,7 @@ export default function Main() {
         </div>
       </div>
 
-      <div className='main-divider'></div>
+      <div className='main-divider'></div> */}
     </div>
   )
 }

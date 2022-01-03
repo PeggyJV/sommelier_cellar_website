@@ -24,6 +24,9 @@ import photoMantas from '@images/team/mantas.png'
 import photoElliot from '@images/team/elliot.png'
 import photoUkpai from '@images/team/ukpai.png'
 import photoEric from '@images/team/eric.png'
+import photoKristi from '@images/team/kristi.png'
+import photoRebecca from '@images/team/rebecca.png'
+import photoCollin from '@images/team/collin.png'
 
 // Team
 const teamMembers = [
@@ -42,39 +45,25 @@ const teamMembers = [
     linkedin: 'https://www.linkedin.com/in/jackzampolin/'
   },
   {
-    name: 'Kevin Kennis',
+    name: 'Kristi Poldsam',
     role: 'Co-Founder',
-    avatar: photoKevin,
-    twitter: 'https://twitter.com/kevinvkennis',
-    linkedin: 'https://www.linkedin.com/in/kkennis/'
+    avatar: photoKristi,
+    twitter: 'https://twitter.com/kpoldsam',
+    linkedin: 'https://www.linkedin.com/in/poldsam/'
   },
   {
-    name: 'Tony Arcieri',
-    role: 'Co-Founder',
-    avatar: photoTony,
-    twitter: 'https://twitter.com/bascule',
-    linkedin: 'https://www.linkedin.com/in/tarcieri'
+    name: 'Eric Bolten',
+    role: 'Senior Software Engineer',
+    avatar: photoEric,
+    twitter: 'https://twitter.com/ebolten',
+    linkedin: 'https://www.linkedin.com/in/ericbolten/'
   },
   {
-    name: 'Lucky Odisetti',
-    role: 'Product Lead',
-    avatar: photoLucky,
-    twitter: 'https://twitter.com/luckyOdiseti',
-    linkedin: 'https://www.linkedin.com/in/lucky-odisetti-701b5437'
-  },
-  {
-    name: 'Mantas Vidutis',
-    role: 'Core Protocol Engineer',
-    avatar: photoMantas,
-    twitter: 'https://twitter.com/mvid',
-    linkedin: 'https://www.linkedin.com/in/mvidutis'
-  },
-  {
-    name: 'Elliot Shiu',
-    role: 'Engineering Lead',
-    avatar: photoElliot,
-    twitter: 'https://twitter.com/sandbochs',
-    linkedin: 'https://www.linkedin.com/in/elliotshiu/'
+    name: 'Collin Brittain',
+    role: 'Senior Software Engineer',
+    avatar: photoCollin,
+    twitter: '',
+    linkedin: 'https://www.linkedin.com/in/collinbrittain/'
   },
   {
     name: 'Ukpai Ugochi',
@@ -84,12 +73,48 @@ const teamMembers = [
     linkedin: 'https://www.linkedin.com/in/ugochi-ukpai-1361b0198/'
   },
   {
-    name: 'Eric Bolten',
-    role: 'Senior Software Engineer',
-    avatar: photoEric,
-    twitter: 'https://twitter.com/ebolten',
-    linkedin: 'https://www.linkedin.com/in/ericbolten/'
+    name: 'Mantas Vidutis',
+    role: 'Core Protocol Engineer',
+    avatar: photoMantas,
+    twitter: 'https://twitter.com/mvid',
+    linkedin: 'https://www.linkedin.com/in/mvidutis'
   },
+  {
+    name: 'Tony Arcieri',
+    role: 'Co-Founder',
+    avatar: photoTony,
+    twitter: 'https://twitter.com/bascule',
+    linkedin: 'https://www.linkedin.com/in/tarcieri'
+  },
+  {
+    name: 'Kevin Kennis',
+    role: 'Co-Founder',
+    avatar: photoKevin,
+    twitter: 'https://twitter.com/kevinvkennis',
+    linkedin: 'https://www.linkedin.com/in/kkennis/'
+  },
+  {
+    name: 'Lucky Odisetti',
+    role: 'Product Lead',
+    avatar: photoLucky,
+    twitter: 'https://twitter.com/luckyOdiseti',
+    linkedin: 'https://www.linkedin.com/in/lucky-odisetti-701b5437'
+  },
+  {
+    name: 'Elliot Shiu',
+    role: 'Engineering Lead',
+    avatar: photoElliot,
+    twitter: 'https://twitter.com/sandbochs',
+    linkedin: 'https://www.linkedin.com/in/elliotshiu/'
+  },
+  {
+    name: 'Rebecca Liao',
+    role: 'Advisor',
+    avatar: photoRebecca,
+    twitter: 'https://twitter.com/beccaliao',
+    linkedin: 'https://www.linkedin.com/in/rebecca-liao/'
+  },
+  
 ]
 
 const featuresData = [

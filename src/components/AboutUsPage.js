@@ -62,7 +62,7 @@ const teamMembers = [
     name: 'Collin Brittain',
     role: 'Senior Software Engineer',
     avatar: photoCollin,
-    twitter: '',
+    twitter: 'https://twitter.com/atro0o',
     linkedin: 'https://www.linkedin.com/in/collinbrittain/'
   },
   {

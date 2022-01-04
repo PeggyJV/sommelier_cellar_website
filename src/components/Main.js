@@ -1,31 +1,15 @@
 import React, {useEffect, useState} from 'react'
-import Link from 'gatsby-link'
-import Profile from '../components/Profile'
-import {isMobileOnly} from 'react-device-detect'
+
+import { getRemainDays } from '../utils/date'
+import { prevZero } from '../utils/string'
 
 import "../assets/scss/main.scss"
 
-// Carousel
-// import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
-// import '@brainhubeu/react-carousel/lib/style.css'
-
-// import loadable from '@loadable/component'
-
-// const Carousel = loadable(() => import('@brainhubeu/react-carousel'))
-// const slidesToShowPlugin = Carousel.slidesToShowPlugin
-
 import welcomeBg from '@images/welcome.png'
 import spiral1Img from '@images/spiral-1.png'
-import spiral2Img from '@images/spiral-2.png'
-import chevronDownImg from '@images/chevron-down.png'
-import coinsImg from '@images/coins.png'
-import coinsWhiteImg from '@images/coins-white.png'
-import infoCircleImg from '@images/info-circle.png'
+import rightArrowImg from '@images/right-arrow.png'
 
-import ethImg from '@images/coins/eth.png'
-import usdcImg from '@images/coins/usdc.png'
-import usdtImg from '@images/coins/usdt.png'
-
+const airdropBgImg = '/images/airdrop-bg-2.png'
 const etheriumImg = '/images/etherium.png'
 
 const whyData1 = [
@@ -76,7 +60,25 @@ function getWindowDimensions() {
   };
 }
 
+function CountNumber({ value, cnt, mark }) { 
+  return (
+    <div className='main-airdrop-countdown-numbers'>
+      {prevZero(value, '0', cnt).split('').map((num, index) => (
+        <div className='main-airdrop-countdown-number' key={`${mark}-${index}`}>
+          {num}
+        </div>
+      ))}
+    </div>
+  )
+}
+
+const END_TIME = 1648684800000    // 2022.3.31 0:0:0 UTC
+
 export default function Main() {
+  const [day, setDay] = useState(0)
+  const [hour, setHour] = useState(0)
+  const [minute, setMinute] = useState(0)
+
   useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
@@ -90,77 +92,65 @@ export default function Main() {
     getWindowDimensions()
   );
 
-  const cellBoardStyle= {
-    // backgroundImage: `url(${spiral2Img})`,
-    // backgroundRepeat: 'no-repeat',
-    // backgroundPosition: 'center center',
-    // backgroundSize: 'contain'
-  }
+  useEffect(() => {
+    let interval = null;
+
+    interval = setInterval(() => {
+      const { day: d, hour: h, minute: m } = getRemainDays(new Date().getTime(), END_TIME)
+      setDay(d)
+      setHour(h)
+      setMinute(m)
+    }, 1000)
+
+    return () => clearInterval(interval)
+  }, [day, hour, minute])
 
   return (
     <div className='mt-5 main-container'>
-      {/* <div className='main-top'>
-        <div className='main-top__left-container' style={{ marginBottom: 20 }}>
-          <h1 className='d-block sommelier'>
-            Sommelier
-          </h1>
-          <h1 className='d-block cellars'>
-            Cellars
-          </h1>
-          <p className='sub-title'>Automated Liquidity Management for Decentralized Finance</p>
-          <a href="https://app.sommelier.finance" className='launch-button' target="_blank">
-            <span>Add Liquidity</span>
-          </a>
-        </div>
-        <div className='main-top__right-container' style={cellBoardStyle}>
-          <div className='cellar-item top'>
-            <div className='cellar-item__header top'>
-              <div className='cellar-item__header__title'>
-                <div className='cellar-item__header__title-title'>
-                  USDC-ETH
-                  <img src={infoCircleImg} />
-                </div>
-                <div className='cellar-item__header__title-icon'>
-                  <img src={ethImg}/>
-                  <img src={usdcImg}/>
-                </div>
+      <div className='main-airdrop'>
+        <div className='main-airdrop-content'>
+          <div className='main-airdrop-title'>
+            <span>SOMM AIRDROP</span>
+            <span>EXPIRES IN</span>
+          </div>
+          <div className='main-airdrop-countdown'>
+            <div className='main-airdrop-countdown-item'>
+              <div className='main-airdrop-countdown-days'>
+                <CountNumber value={day} cnt={3} mark='day' />
               </div>
-              <div className='cellar-item__header__badge'>
-                <div className='cellar-item__header__badge-item transparent'>Uniswapv3</div>
-                <div className='cellar-item__header__badge-item blue'>0.05%</div>
+              <div className='main-airdrop-countdown-labels'>
+                Days
               </div>
             </div>
-            <div className='cellar-item__body'>
-              <div className='cellar-item__body-row'>
-                <div className='cellar-item__body-key'>
-                  TVL
-                </div>
-                <div className='cellar-item__body-value'>
-                  $0
-                </div>
+            <div className='main-airdrop-countdown-item'><span>:</span></div>
+            <div className='main-airdrop-countdown-item'>
+              <div className='main-airdrop-countdown-days'>
+                <CountNumber value={hour} cnt={2} mark='hour' />
               </div>
-              <div className='cellar-item__body-row'>
-                <div className='cellar-item__body-key'>
-                  7d Earnings
-                </div>
-                <div className='cellar-item__body-value green'>
-                  $0
-                </div>
+              <div className='main-airdrop-countdown-labels'>
+                Hours
               </div>
-              <div className='cellar-item__body-row'>
-                <div className='cellar-item__body-key'>
-                  Life Earnings
-                </div>
-                <div className='cellar-item__body-value green'>
-                  $0
-                </div>
+            </div>
+            <div className='main-airdrop-countdown-item'><span>:</span></div>
+            <div className='main-airdrop-countdown-item'>
+              <div className='main-airdrop-countdown-days'>
+                <CountNumber value={minute} cnt={2} mark='minute' />
               </div>
-              <div className='cellar-item__body-divider'></div>
-              <a href='https://app.sommelier.finance' className='cellar-add-liquidity-button'>Add Liquidity</a>
+              <div className='main-airdrop-countdown-labels'>
+                Minutes
+              </div>
             </div>
           </div>
+          <a href="https://airdrop.sommelier.finance/" target="_blank" className='main-airdrop-link'>
+            Claim your tokens now
+            <img src={rightArrowImg} />
+          </a>
         </div>
-      </div> */}
+        <div className='main-airdrop-bg'>
+          <img src={airdropBgImg} />
+        </div>
+      </div>
+
       <a name="features" id='features'></a>
 
       <div className='main-welcome-why'>
@@ -232,69 +222,6 @@ export default function Main() {
 
       <div className='main-divider'></div>
 
-      {/* <div className='main-cellar'>
-        <div className='main-cellar__left-container'>
-          <h1 className='d-block sommelier'>
-            Sommelier<br/>Cellars
-          </h1>
-          <p className='sub-title mt-3'>Check out the Sommelier Blockchain Explorer for other Cellars and performance.</p>
-          <a href="https://app.sommelier.finance" className='launch-button' target="_blank">
-            <span>Add Liquidity</span>
-          </a>
-        </div>
-        <div className='main-cellar__right-container'>
-          {[0].map((item) => (
-            <div className='cellar-item' key={`cellar-item-${item}`}>
-              <div className='cellar-item__header'>
-                <div className='cellar-item__header__title'>
-                  <div className='cellar-item__header__title-title'>
-                    USDC-ETH
-                    <img src={infoCircleImg} />
-                  </div>
-                  <div className='cellar-item__header__title-icon'>
-                    <img src={ethImg}/>
-                    <img src={usdcImg}/>
-                  </div>
-                </div>
-                <div className='cellar-item__header__badge'>
-                  <div className='cellar-item__header__badge-item transparent'>Uniswapv3</div>
-                  <div className='cellar-item__header__badge-item blue'>0.05%</div>
-                </div>
-              </div>
-              <div className='cellar-item__body'>
-                <div className='cellar-item__body-row'>
-                  <div className='cellar-item__body-key'>
-                    TVL
-                  </div>
-                  <div className='cellar-item__body-value'>
-                    $0
-                  </div>
-                </div>
-                <div className='cellar-item__body-row'>
-                  <div className='cellar-item__body-key'>
-                    7d Earnings
-                  </div>
-                  <div className='cellar-item__body-value green'>
-                    $0
-                  </div>
-                </div>
-                <div className='cellar-item__body-row'>
-                  <div className='cellar-item__body-key'>
-                    Life Earnings
-                  </div>
-                  <div className='cellar-item__body-value green'>
-                    $0
-                  </div>
-                </div>
-                <div className='cellar-item__body-divider'></div>
-                <a href='https://app.sommelier.finance' className='cellar-add-liquidity-button'>Add Liquidity</a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className='main-divider'></div> */}
     </div>
   )
 }

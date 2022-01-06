@@ -106,7 +106,7 @@ export default function Main() {
   }, [day, hour, minute])
 
   return (
-    <div className='mt-5 main-container'>
+    <div className='main-container'>
       <div className='main-airdrop'>
         <div className='main-airdrop-content'>
           <div className='main-airdrop-title'>

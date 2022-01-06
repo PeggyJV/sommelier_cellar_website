@@ -231,8 +231,14 @@ const Nav = ({ settings, lang, pathname }) => {
                   </a>
                 </li>
 
-                <li key={1} className={cn({ active: menu === 'features' })}>
+                {/* <li key={1} className={cn({ active: menu === 'features' })}>
                   <a href='/#features' onClick={(e) => handleMoveToSection(e, 'features')} className={cn('nav-menu-item', { active: menu === 'features' })}>Features</a>
+                </li> */}
+
+                <li key={1} className='d-flex align-items-center'>
+                  <a href="https://airdrop.sommelier.finance/" className='nav-menu-item nav-menu-item--airdrop' target='_blank'>
+                    Airdrop
+                  </a>
                 </li>
 
                 <li key={2} className={cn({ active: menu === 'usecases' })}>
@@ -254,11 +260,11 @@ const Nav = ({ settings, lang, pathname }) => {
                     {`Blog`}
                   </Link>
                 </li>
-                <li key={6} className={cn({ active: menu === 'resources' })}>
+                {/* <li key={6} className={cn({ active: menu === 'resources' })}>
                   <Link to={`/resources/`} className={cn('nav-menu-item', { active: menu === 'resources' })}>
                     {`Resource`}
                   </Link>
-                </li>
+                </li> */}
                 <li key={7} className={cn({ active: menu === 'events' })}>
                   <Link to={`/events/`} className={cn('nav-menu-item', { active: menu === 'events' })}>
                     {`Event`}
@@ -291,7 +297,7 @@ const Nav = ({ settings, lang, pathname }) => {
                     )}
                 </li>
 
-                <li key={999} className='d-flex align-items-center'>
+                <li key={999}>
                   <a href="https://app.sommelier.finance" className='nav-menu-item nav-menu-item--launch' target="_blank">
                     Add Liquidity
                   </a>

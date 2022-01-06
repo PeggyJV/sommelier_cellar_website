@@ -82,14 +82,18 @@ h5 {
 }
 
 .nav-container {
-  margin-top: 1.313rem;
+  // margin-top: 1.313rem;
+  height: 165px;
+  display: flex;
+  align-items: center;
   @include respond-to(desktop) {
     margin-left: 80px;
     margin-right: 80px;
   }
   @include respond-to(mobile) {
     flex-direction: column;
-    align-items: flex-start;
+    // align-items: flex-start;
+    justify-content: center;
   }
   .nav-container__menu-mask {
     width: 100vw;
@@ -163,6 +167,9 @@ h5 {
   li {
     float: left;
     height: 100%;
+    display: flex;
+    align-items: center;
+
 
     @include respond-to(mobile) {
       width: 100%;
@@ -181,7 +188,7 @@ h5 {
     text-align: center;
     padding: 16px;
     text-decoration: none;
-
+   
     @include respond-to(mobile) {
       text-align: left;
       font-size: 16px !important;
@@ -199,13 +206,13 @@ h5 {
   .nav-menu-item--launch {
     margin-top: 50px;
     color: $white;
-    border-radius: 10.6327px;
+    border-radius: 4px;
     background: linear-gradient(269.95deg, #E323FF 0.02%, #7517F8 97.45%);
     display: flex;
     align-items: center;
     cursor: pointer;
     width: 144px;
-    height: 44px;
+    height: 31px;
     font-size: 16px !important;
     justify-content: center;
     border-bottom: none;
@@ -222,6 +229,28 @@ h5 {
   //   background-color: $dark-white;
   //   color: #ff488e;
   // }
+    .nav-menu-item--airdrop {
+      margin-left: 16px;
+      color: #E323FF;
+      border-radius: 4px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      width: 74px;
+      height: 31px;
+      font-size: 16px !important;
+      justify-content: center;
+      border-bottom: none;
+      @include respond-to(tablet) {
+        margin-left: 1rem;
+        margin-top: 0px;
+      }
+      @include respond-to(desktop) {
+        margin-left: 1rem;
+        margin-top: 0px;
+      }
+    }
 }
 
 // Footer

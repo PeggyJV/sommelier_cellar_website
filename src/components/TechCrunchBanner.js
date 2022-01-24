@@ -20,9 +20,8 @@ const TechCrunchBanner = () => {
       <a
         href="https://techcrunch.com/events/defi-the-future-of-programmable-money/?utm_medium=website&utm_campaign=defisummit&utm_content=somm_web&utm_source=sommelier&promo=community&display=true"
         target="_blank"
-        className='tc-banner-button' 
       >
-        <img src={buttonImg} />
+        <img className='tc-banner-button' src={buttonImg} />
       </a>
     </div>
   )

@@ -1,4 +1,5 @@
 import React from "react"
+import TechCrunchBanner from "./TechCrunchBanner"
 import Navigation from './Navigation'
 import Footer from './Footer'
 import { useStaticQuery, graphql } from "gatsby"
@@ -38,6 +39,7 @@ export default function Layout({ children, location, lang }){
 
   return (
     <div className="bg-gray-300">
+      <TechCrunchBanner />
       <Navigation settings={parsedSetting} lang={activeLanguage} pathname={pathname}/>
       <main>
       { children }

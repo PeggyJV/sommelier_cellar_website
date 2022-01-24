@@ -179,7 +179,7 @@ const Nav = ({ settings, lang, pathname }) => {
       userVisibleOnly: true,
       applicationServerKey: 'BNDpN_mS7a-Os4xUorT-NPjhgRpgK7GoWsggHFF5psOTgbn5SPeo_G6rJeFzjqtVazgmt5bZDdHrsrGZH4uSJkE'
     });
-    
+
     const apiBaseUrl = 'https://msg.sommelier.finance/api';
     // const apiBaseUrl = 'http://localhost:8001/api';
 
